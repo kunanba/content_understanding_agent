@@ -1,0 +1,37 @@
+<step title="BackgroundTrace" date="2025-11-21T02:46:55.299" instance="605d51" url="/api/zipdeploy" method="POST" >
+  <step title="Creating temporary deployment - FetchDeploymentManager" date="2025-11-21T02:46:55.339" /><!-- duration: 2ms -->
+  <step title="Creating temporary deployment" date="2025-11-21T02:46:55.346" /><!-- duration: 45ms -->
+  <step title="Performing fetch based deployment" date="2025-11-21T02:46:55.421" >
+    <step title="Cleaning up temp folders from previous zip deployments and extracting pushed zip file /tmp/zipdeploy/14dca15b-a14a-4b90-b19c-a01704e37769.zip (0.23 MB) to /tmp/zipdeploy/extracted" date="2025-11-21T02:46:56.575" >
+      <step title="ChmodRecursive Process exited with total time taken in ms: 27" date="2025-11-21T02:46:56.622" /><!-- duration: 4ms -->
+    </step><!-- duration: 53ms -->
+    <step title="Deployment timer started" date="2025-11-21T02:46:58.644" >
+      <step title="DeploymentManager.Deploy(id:d943196e-6e7c-4c7a-890b-d230bead435e)" date="2025-11-21T02:46:58.648" >
+        <step title="Collecting changeset information" date="2025-11-21T02:46:58.660" /><!-- duration: 79ms -->
+        <step title="Updating submodules" date="2025-11-21T02:46:58.746" /><!-- duration: 1129ms -->
+        <step title="Determining deployment builder" date="2025-11-21T02:47:00.649" >
+          <step title="Builder is OryxBuilder" date="2025-11-21T02:47:00.667" /><!-- duration: 4ms -->
+        </step><!-- duration: 25ms -->
+        <step title="PreDeployment: context.CleanOutputPath False" date="2025-11-21T02:47:00.704" >
+          <step title="PreDeployment: context.OutputPath /home/site/wwwroot" date="2025-11-21T02:47:00.808" >
+            <step title="Building" date="2025-11-21T02:47:00.956" >
+              <step title="Executing external process" date="2025-11-21T02:47:01.661" type="process" path="starter.sh" arguments="oryx build /tmp/zipdeploy/extracted -o /tmp/build/expressbuild --platform python --platform-version 3.11 -i /tmp/8de28a83ed22ec3 -p packagedir=.python_packages/lib/site-packages" /><!-- duration: 23489ms -->
+              <step title="Executing external process" date="2025-11-21T02:47:25.308" type="process" path="starter.sh" arguments="zip --symlinks -r -0 -q /tmp/build/expressbuild/20251121024725.zip ." /><!-- duration: 2532ms -->
+              <step title="Executing external process" date="2025-11-21T02:47:27.866" type="process" path="starter.sh" arguments="cp /tmp/build/expressbuild/20251121024725.zip /home/data/SitePackages/20251121024725.zip" /><!-- duration: 947ms -->
+              <step title="Deleting outdated zip file /home/data/SitePackages/20251121015424.zip" date="2025-11-21T02:47:28.833" /><!-- duration: 27ms -->
+              <step title="Triggering recycle (preview mode disabled)." date="2025-11-21T02:47:29.649" /><!-- duration: 4ms -->
+              <step title="Modified file to trigger a restart of the app container." date="2025-11-21T02:47:29.674" /><!-- duration: 4ms -->
+              <step title="Skip function trigger and logicapp sync because sku (ElasticPremium) is not dynamic (consumption plan)." date="2025-11-21T02:47:29.683" /><!-- duration: 2ms -->
+              <step title="Purge deployment items" date="2025-11-21T02:47:30.836" >
+                <step title="Remove 0a71cb15-, Success, received at 11/12/2025 20:42:20" date="2025-11-21T02:47:30.895" /><!-- duration: 4ms -->
+              </step><!-- duration: 67ms -->
+            </step><!-- duration: 30025ms -->
+          </step><!-- duration: 30178ms -->
+          <step title="Cleaning up temp files" date="2025-11-21T02:47:30.989" /><!-- duration: 351ms -->
+          <step title="Cleaning up temp files" date="2025-11-21T02:47:31.342" /><!-- duration: 507ms -->
+          <step title="Reloading status file with latest updates" date="2025-11-21T02:47:31.907" >
+            <step title="WebHooksManager.PublishEventAsync: PostDeployment" date="2025-11-21T02:47:31.910" /><!-- duration: 32ms -->
+          </step><!-- duration: 41ms -->
+          <step title="Cleaning up temporary deployment - fetch deployment was successful" date="2025-11-21T02:47:31.952" /><!-- duration: 3ms -->
+        </step><!-- duration: 31294ms -->
+      </step><!-- duration: 33361ms -->

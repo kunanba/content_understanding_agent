@@ -1,0 +1,34 @@
+2025-11-23T02:35:15.7740775Z Container start method called.
+2025-11-23T02:35:15.7742614Z Establishing network.
+2025-11-23T02:35:15.7743965Z Pulling image: azure-functions/python:4-python3.11-appservice-stage5.
+2025-11-23T02:35:15.8090257Z Container is starting.
+2025-11-23T02:35:15.8092018Z Establishing user namespace if not established already.
+2025-11-23T02:35:15.8093383Z Establishing network if not established already.
+2025-11-23T02:35:15.8094776Z Mounting volumes.
+2025-11-23T02:35:15.8097095Z Nested mountpoint site/wwwroot
+2025-11-23T02:35:15.8104335Z Nested mountpoint volatile/logs
+2025-11-23T02:35:15.8197553Z Nested mountpoint 
+2025-11-23T02:35:15.8448981Z Nested mountpoint 
+2025-11-23T02:35:15.8455605Z Nested mountpoint 
+2025-11-23T02:35:15.8646377Z Nested mountpoint 
+2025-11-23T02:35:19.7196106Z Creating container.
+2025-11-23T02:35:19.7197759Z Creating pipes for streaming container io.
+2025-11-23T02:35:19.7199237Z Creating stdout named pipe at /podr/container/pipe/9c9311d5ef38_func-content-understanding-2220/stdout_8fccfe8643e740a58883952df76771f2.
+2025-11-23T02:35:19.7201637Z Successfully created stdout named pipe at: /podr/container/pipe/9c9311d5ef38_func-content-understanding-2220/stdout_8fccfe8643e740a58883952df76771f2.
+2025-11-23T02:35:19.7203031Z Opening named pipe /podr/container/pipe/9c9311d5ef38_func-content-understanding-2220/stdout_8fccfe8643e740a58883952df76771f2 for reading in non-blocking mode.
+2025-11-23T02:35:19.7204503Z Successfully opened named pipe: /podr/container/pipe/9c9311d5ef38_func-content-understanding-2220/stdout_8fccfe8643e740a58883952df76771f2.
+2025-11-23T02:35:19.7205675Z Successfully removed non-blocking flag from /podr/container/pipe/9c9311d5ef38_func-content-understanding-2220/stdout_8fccfe8643e740a58883952df76771f2.
+2025-11-23T02:35:19.7206844Z Creating stderr named pipe at /podr/container/pipe/9c9311d5ef38_func-content-understanding-2220/stderr_038fd08fae7f4aafa2c6855446914829.
+2025-11-23T02:35:19.7208449Z Successfully created stderr named pipe at: /podr/container/pipe/9c9311d5ef38_func-content-understanding-2220/stderr_038fd08fae7f4aafa2c6855446914829.
+2025-11-23T02:35:19.7209554Z Opening named pipe /podr/container/pipe/9c9311d5ef38_func-content-understanding-2220/stderr_038fd08fae7f4aafa2c6855446914829 for reading in non-blocking mode.
+2025-11-23T02:35:19.7210813Z Successfully opened named pipe: /podr/container/pipe/9c9311d5ef38_func-content-understanding-2220/stderr_038fd08fae7f4aafa2c6855446914829.
+2025-11-23T02:35:19.7211946Z Successfully removed non-blocking flag from /podr/container/pipe/9c9311d5ef38_func-content-understanding-2220/stderr_038fd08fae7f4aafa2c6855446914829.
+2025-11-23T02:35:19.7213179Z Creating container with image: azure-functions/python:4-python3.11-appservice-stage5 from registry: mcr.microsoft.com and fully qualified image name: mcr.microsoft.com/azure-functions/python:4-python3.11-appservice-stage5
+2025-11-23T02:35:19.9007296Z Starting container: 9c9311d5ef38_func-content-understanding-2220.
+2025-11-23T02:35:19.9161256Z Starting watchers and probes.
+2025-11-23T02:35:19.9167887Z Starting metrics collection.
+2025-11-23T02:35:19.9169536Z Container is running.
+2025-11-23T02:35:19.9549060Z Container start method finished after 4179 ms.
+2025-11-23T02:35:26.0633449Z Site startup probe succeeded after 6.1061997 seconds.
+2025-11-23T02:35:26.1843009Z Site is running with deployment version: d01ee311-e62e-4b29-ad2a-37639b33e561
+2025-11-23T02:35:26.1848641Z Site started.

@@ -1,0 +1,17 @@
+<step title="Incoming Request" date="2025-11-21T03:13:58.538" instance="605d51" url="/api/zipdeploy?isAsync=true&amp;author=THINKPAD" method="POST" type="request" pid="768,1,23" Host="func-content-understanding-2220.scm.azurewebsites.net" User-Agent="functions-core-tools/4.4.0" Authorization="Bea..." Content-Type="application/zip" If-Match="*" Content-Length="238329" X-ARR-LOG-ID="cd3a3966-966a-43c8-81c6-03a2a1ce6089" CLIENT-IP="104.9.131.63:65498" X-SITE-DEPLOYMENT-ID="func-content-understanding-2220" WAS-DEFAULT-HOSTNAME="func-content-understanding-2220.scm.azurewebsites.net" X-Forwarded-Proto="https" X-AppService-Proto="https" X-Forwarded-TlsVersion="1.3" X-WAWS-Unencoded-URL="/api/zipdeploy?isAsync=true&amp;author=THINKPAD" X-Client-IP="104.9.131.63" X-Client-Port="65498" >
+  <step title="Cleanup Xml Logs" date="2025-11-21T03:13:58.540" >
+    <step title="Cleanup Infos" date="2025-11-21T03:13:58.551" totalFiles="390" totalCleanup="230" /><!-- duration: 4ms -->
+  </step><!-- duration: 18ms -->
+  <step title="ZipPushDeploy" date="2025-11-21T03:13:58.573" >
+    <step title="Functions App ZipDeploy. Extract zip. Remote build." date="2025-11-21T03:13:58.580" /><!-- duration: 3ms -->
+    <step title="Starting PushDeployAsync" date="2025-11-21T03:13:58.590" /><!-- duration: 3ms -->
+    <step title="Writing artifact to /tmp/zipdeploy/745d9fbe-e37f-4080-82b2-6f4e6b1f701b.zip" date="2025-11-21T03:13:58.605" >
+      <step title="Writing multipart request body to /tmp/zipdeploy/745d9fbe-e37f-4080-82b2-6f4e6b1f701b.zip" date="2025-11-21T03:13:58.620" /><!-- duration: 2ms -->
+    </step><!-- duration: 21ms -->
+    <step title="Start deployment in the background" date="2025-11-21T03:13:58.635" >
+      <step title="Acquiring Deployment Lock" date="2025-11-21T03:13:58.643" /><!-- duration: 3ms -->
+      <step title="Acquired Deployment Lock" date="2025-11-21T03:13:58.667" /><!-- duration: 3ms -->
+    </step><!-- duration: 96ms -->
+  </step><!-- duration: 163ms -->
+  <step title="Outgoing response" date="2025-11-21T03:13:58.743" type="response" statusCode="202" statusText="Accepted" /><!-- duration: 3ms -->
+</step><!-- duration: 211ms -->

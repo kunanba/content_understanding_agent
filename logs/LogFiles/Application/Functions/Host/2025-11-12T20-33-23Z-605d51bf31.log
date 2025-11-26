@@ -1,0 +1,105 @@
+2025-11-12T20:33:22.935 [Information] Host Status: {
+  "id": "func-content-understanding-2220",
+  "state": "Running",
+  "version": "4.1044.300.0",
+  "versionDetails": "4.1044.300-dev.0.0+a9abdf3664d00a7b7c4bc9e5b20ba7af07c9f201",
+  "platformVersion": "106.0.7.114",
+  "instanceId": "605d51bf315432eed0b82a1248444a551aa87e99c534f24b50a99a525aae342f",
+  "computerName": "pl0sdlwk000UGK",
+  "processUptime": 154497,
+  "functionAppContentEditingState": "Unknown",
+  "extensionBundle": {
+    "id": "Microsoft.Azure.Functions.ExtensionBundle",
+    "version": "4.28.0"
+  }
+}
+2025-11-12T20:33:22.962 [Information] Loading functions metadata
+2025-11-12T20:33:22.972 [Information] Reading functions metadata (Custom)
+2025-11-12T20:33:22.974 [Information] 0 functions found (Custom)
+2025-11-12T20:33:22.975 [Information] No functions were found. This can occur before you deploy code to your function app or when the host.json file is missing from the most recent deployment. Make sure that your deployment package includes the host.json file in the root of the package. For deployment package requirements, see https://aka.ms/functions-deployment-technologies.
+2025-11-12T20:33:22.975 [Information] 0 functions loaded
+2025-11-12T20:33:23.135 [Information] Loading functions metadata
+2025-11-12T20:33:23.136 [Information] Reading functions metadata (Custom)
+2025-11-12T20:33:23.136 [Information] 0 functions found (Custom)
+2025-11-12T20:33:23.136 [Information] No functions were found. This can occur before you deploy code to your function app or when the host.json file is missing from the most recent deployment. Make sure that your deployment package includes the host.json file in the root of the package. For deployment package requirements, see https://aka.ms/functions-deployment-technologies.
+2025-11-12T20:33:23.136 [Information] 0 functions loaded
+2025-11-12T20:33:23.140 [Information] HttpOptions
+{
+  "DynamicThrottlesEnabled": false,
+  "EnableChunkedRequestBinding": false,
+  "MaxConcurrentRequests": -1,
+  "MaxOutstandingRequests": -1,
+  "RoutePrefix": "api"
+}
+2025-11-12T20:33:23.141 [Information] ConcurrencyOptions
+{
+  "DynamicConcurrencyEnabled": false,
+  "MaximumFunctionConcurrency": 500,
+  "CPUThreshold": 0.8,
+  "SnapshotPersistenceEnabled": true
+}
+2025-11-12T20:33:23.146 [Information] Loading functions metadata
+2025-11-12T20:33:23.146 [Information] Reading functions metadata (Custom)
+2025-11-12T20:33:23.146 [Information] 0 functions found (Custom)
+2025-11-12T20:33:23.146 [Information] No functions were found. This can occur before you deploy code to your function app or when the host.json file is missing from the most recent deployment. Make sure that your deployment package includes the host.json file in the root of the package. For deployment package requirements, see https://aka.ms/functions-deployment-technologies.
+2025-11-12T20:33:23.146 [Information] 0 functions loaded
+2025-11-12T20:33:23.260 [Information] Host Status: {
+  "id": "func-content-understanding-2220",
+  "state": "Running",
+  "version": "4.1044.300.0",
+  "versionDetails": "4.1044.300-dev.0.0+a9abdf3664d00a7b7c4bc9e5b20ba7af07c9f201",
+  "platformVersion": "106.0.7.114",
+  "instanceId": "605d51bf315432eed0b82a1248444a551aa87e99c534f24b50a99a525aae342f",
+  "computerName": "pl0sdlwk000UGK",
+  "processUptime": 154825,
+  "functionAppContentEditingState": "Unknown",
+  "extensionBundle": {
+    "id": "Microsoft.Azure.Functions.ExtensionBundle",
+    "version": "4.28.0"
+  }
+}
+2025-11-12T20:33:23.428 [Information] Loading functions metadata
+2025-11-12T20:33:23.428 [Information] Reading functions metadata (Custom)
+2025-11-12T20:33:23.428 [Information] 0 functions found (Custom)
+2025-11-12T20:33:23.428 [Information] No functions were found. This can occur before you deploy code to your function app or when the host.json file is missing from the most recent deployment. Make sure that your deployment package includes the host.json file in the root of the package. For deployment package requirements, see https://aka.ms/functions-deployment-technologies.
+2025-11-12T20:33:23.428 [Information] 0 functions loaded
+2025-11-12T20:33:23.595 [Information] Loading functions metadata
+2025-11-12T20:33:23.595 [Information] Reading functions metadata (Custom)
+2025-11-12T20:33:23.595 [Information] 0 functions found (Custom)
+2025-11-12T20:33:23.596 [Information] No functions were found. This can occur before you deploy code to your function app or when the host.json file is missing from the most recent deployment. Make sure that your deployment package includes the host.json file in the root of the package. For deployment package requirements, see https://aka.ms/functions-deployment-technologies.
+2025-11-12T20:33:23.596 [Information] 0 functions loaded
+2025-11-12T20:33:23.597 [Information] Loading functions metadata
+2025-11-12T20:33:23.597 [Information] Reading functions metadata (Custom)
+2025-11-12T20:33:23.597 [Information] 0 functions found (Custom)
+2025-11-12T20:33:23.597 [Information] No functions were found. This can occur before you deploy code to your function app or when the host.json file is missing from the most recent deployment. Make sure that your deployment package includes the host.json file in the root of the package. For deployment package requirements, see https://aka.ms/functions-deployment-technologies.
+2025-11-12T20:33:23.597 [Information] 0 functions loaded
+2025-11-12T20:33:27.008 [Information] Host Status: {
+  "id": "func-content-understanding-2220",
+  "state": "Running",
+  "version": "4.1044.300.0",
+  "versionDetails": "4.1044.300-dev.0.0+a9abdf3664d00a7b7c4bc9e5b20ba7af07c9f201",
+  "platformVersion": "106.0.7.114",
+  "instanceId": "605d51bf315432eed0b82a1248444a551aa87e99c534f24b50a99a525aae342f",
+  "computerName": "pl0sdlwk000UGK",
+  "processUptime": 158573,
+  "functionAppContentEditingState": "Unknown",
+  "extensionBundle": {
+    "id": "Microsoft.Azure.Functions.ExtensionBundle",
+    "version": "4.28.0"
+  }
+}
+2025-11-12T20:44:18.140 [Information] HttpOptions
+{
+  "DynamicThrottlesEnabled": false,
+  "EnableChunkedRequestBinding": false,
+  "MaxConcurrentRequests": -1,
+  "MaxOutstandingRequests": -1,
+  "RoutePrefix": "api"
+}
+2025-11-12T20:44:18.151 [Information] ConcurrencyOptions
+{
+  "DynamicConcurrencyEnabled": false,
+  "MaximumFunctionConcurrency": 500,
+  "CPUThreshold": 0.8,
+  "SnapshotPersistenceEnabled": true
+}

@@ -1,0 +1,6 @@
+<step title="Incoming Request" date="2025-11-25T18:24:37.582" instance="416743" url="/deployments/4265c2b7-a52f-45fb-aa81-8c89d62000c9/log" method="GET" type="request" pid="768,1,18" Host="func-content-understanding-2220.scm.azurewebsites.net" User-Agent="functions-core-tools/4.4.0" Authorization="Bea..." Cookie="ARRAffinity=41674339e033c5154d0017025c64d267a61ffbf7075bc20ef7d765f639c5df1d; ARRAffinitySameSite=41674339e033c5154d0017025c64d267a61ffbf7075bc20ef7d765f639c5df1d" X-ARR-LOG-ID="1cd1aaf2-7807-48a7-8529-bea6a737521c" CLIENT-IP="104.9.131.63:49677" X-SITE-DEPLOYMENT-ID="func-content-understanding-2220" WAS-DEFAULT-HOSTNAME="func-content-understanding-2220.scm.azurewebsites.net" X-Forwarded-Proto="https" X-AppService-Proto="https" X-Forwarded-TlsVersion="1.3" X-WAWS-Unencoded-URL="/deployments/4265c2b7-a52f-45fb-aa81-8c89d62000c9/log" X-Client-IP="104.9.131.63" X-Client-Port="49677" >
+  <step title="DeploymentService.GetLogEntry" date="2025-11-25T18:24:37.586" >
+    <step title="DeploymentManager.GetLogEntries(id:4265c2b7-a52f-45fb-aa81-8c89d62000c9)" date="2025-11-25T18:24:37.588" /><!-- duration: 5ms -->
+  </step><!-- duration: 9ms -->
+  <step title="Outgoing response" date="2025-11-25T18:24:37.597" type="response" statusCode="200" statusText="OK" /><!-- duration: 3ms -->
+</step><!-- duration: 20ms -->

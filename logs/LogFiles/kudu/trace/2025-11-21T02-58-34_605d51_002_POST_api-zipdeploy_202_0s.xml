@@ -1,0 +1,17 @@
+<step title="Incoming Request" date="2025-11-21T02:58:34.052" instance="605d51" url="/api/zipdeploy?isAsync=true&amp;author=THINKPAD" method="POST" type="request" pid="768,1,19" Host="func-content-understanding-2220.scm.azurewebsites.net" User-Agent="functions-core-tools/4.4.0" Authorization="Bea..." Content-Type="application/zip" If-Match="*" Content-Length="238351" X-ARR-LOG-ID="4b6b123c-6801-4901-b53d-aae83e1edf95" CLIENT-IP="104.9.131.63:52414" X-SITE-DEPLOYMENT-ID="func-content-understanding-2220" WAS-DEFAULT-HOSTNAME="func-content-understanding-2220.scm.azurewebsites.net" X-Forwarded-Proto="https" X-AppService-Proto="https" X-Forwarded-TlsVersion="1.3" X-WAWS-Unencoded-URL="/api/zipdeploy?isAsync=true&amp;author=THINKPAD" X-Client-IP="104.9.131.63" X-Client-Port="52414" >
+  <step title="ZipPushDeploy" date="2025-11-21T02:58:34.196" >
+    <step title="Functions App ZipDeploy. Extract zip. Remote build." date="2025-11-21T02:58:34.201" /><!-- duration: 3ms -->
+    <step title="None repository commit" date="2025-11-21T02:58:34.209" >
+      <step title="Commit id: a6931daf-8658-459a-bc54-fc7b00291fa7" date="2025-11-21T02:58:34.213" Message="N/A" AuthorName="N/A" AuthorEmail="N/A" /><!-- duration: 2ms -->
+    </step><!-- duration: 8ms -->
+    <step title="Starting PushDeployAsync" date="2025-11-21T02:58:34.220" /><!-- duration: 3ms -->
+    <step title="Writing artifact to /tmp/zipdeploy/9f551e83-3075-4c6a-9fee-95896d869f68.zip" date="2025-11-21T02:58:34.233" >
+      <step title="Writing multipart request body to /tmp/zipdeploy/9f551e83-3075-4c6a-9fee-95896d869f68.zip" date="2025-11-21T02:58:34.236" /><!-- duration: 3ms -->
+    </step><!-- duration: 25ms -->
+    <step title="Start deployment in the background" date="2025-11-21T02:58:34.287" >
+      <step title="Acquiring Deployment Lock" date="2025-11-21T02:58:34.299" /><!-- duration: 3ms -->
+      <step title="Acquired Deployment Lock" date="2025-11-21T02:58:34.336" /><!-- duration: 2ms -->
+    </step><!-- duration: 151ms -->
+  </step><!-- duration: 246ms -->
+  <step title="Outgoing response" date="2025-11-21T02:58:34.449" type="response" statusCode="202" statusText="Accepted" /><!-- duration: 3ms -->
+</step><!-- duration: 402ms -->

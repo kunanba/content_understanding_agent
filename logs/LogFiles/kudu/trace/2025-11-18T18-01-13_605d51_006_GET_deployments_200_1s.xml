@@ -1,0 +1,10 @@
+<step title="Incoming Request" date="2025-11-18T18:01:13.255" instance="605d51" url="/deployments" method="GET" type="request" pid="768,1,14" Host="func-content-understanding-2220.scm.azurewebsites.net" User-Agent="functions-core-tools/4.4.0" Authorization="Bea..." Cookie="ARRAffinity=605d51bf315432eed0b82a1248444a551aa87e99c534f24b50a99a525aae342f; ARRAffinitySameSite=605d51bf315432eed0b82a1248444a551aa87e99c534f24b50a99a525aae342f" X-ARR-LOG-ID="92f2f679-6be6-4b14-ae9d-aaa8d9347089" CLIENT-IP="104.9.131.63:62250" X-SITE-DEPLOYMENT-ID="func-content-understanding-2220" WAS-DEFAULT-HOSTNAME="func-content-understanding-2220.scm.azurewebsites.net" X-Forwarded-Proto="https" X-AppService-Proto="https" X-Forwarded-TlsVersion="1.3" X-WAWS-Unencoded-URL="/deployments" X-Client-IP="104.9.131.63" X-Client-Port="62250" >
+  <step title="Cleanup Xml Logs" date="2025-11-18T18:01:13.260" /><!-- duration: 46ms -->
+  <step title="DeploymentService.GetCurrentEtag" date="2025-11-18T18:01:13.318" >
+    <step title="Current Etag: &quot;f721d93393d813af&quot;, Cached Etag: &quot;f721d93391de44a7&quot;" date="2025-11-18T18:01:13.338" /><!-- duration: 3ms -->
+  </step><!-- duration: 26ms -->
+  <step title="DeploymentService.GetDeployResults" date="2025-11-18T18:01:13.347" >
+    <step title="DeploymentManager.GetResults" date="2025-11-18T18:01:13.350" /><!-- duration: 404ms -->
+  </step><!-- duration: 410ms -->
+  <step title="Outgoing response" date="2025-11-18T18:01:13.760" type="response" statusCode="200" statusText="OK" /><!-- duration: 3ms -->
+</step><!-- duration: 511ms -->

@@ -1,0 +1,120 @@
+2025-11-21T01:54:05.5676244Z,Updating submodules.,87cbce04-08ff-46c7-8a46-b8d5865c8ca6,0
+2025-11-21T01:54:06.6735322Z,Preparing deployment for commit id 'b42275cd-1'.,57f1af02-fb47-45a2-aed2-5fefa28c0068,0
+2025-11-21T01:54:06.9425109Z,PreDeployment: context.CleanOutputPath False,b180b00e-deee-495f-b87d-68bb8bce5de0,0
+2025-11-21T01:54:07.0540886Z,PreDeployment: context.OutputPath /home/site/wwwroot,63d143b3-1673-40ac-8c69-5911e8724efa,0
+2025-11-21T01:54:07.1689384Z,Repository path is /tmp/zipdeploy/extracted,a095f569-fb70-4460-93c2-49473eacf62b,0
+2025-11-21T01:54:07.6304264Z,Running oryx build...,20d7817b-4c2c-4883-85a5-8038dd606e20,0
+	2025-11-21T01:54:07.6411860Z,Command: oryx build /tmp/zipdeploy/extracted -o /tmp/build/expressbuild --platform python --platform-version 3.11 -i /tmp/8de28a0db0c35bb -p packagedir=.python_packages/lib/site-packages,,0
+	2025-11-21T01:54:08.0348001Z,Operation performed by Microsoft Oryx&comma; https://github.com/Microsoft/Oryx,,0
+	2025-11-21T01:54:08.0481940Z,You can report issues at https://github.com/Microsoft/Oryx/issues,,0
+	2025-11-21T01:54:08.0921028Z,,,0
+	2025-11-21T01:54:08.1001844Z,Oryx Version: 0.2.20251022.1+bef98bc7139feefaa74be16de9d835e2c85385d4&comma; Commit: bef98bc7139feefaa74be16de9d835e2c85385d4&comma; ReleaseTagName: 20251022.1,,0
+	2025-11-21T01:54:08.1063173Z,,,0
+	2025-11-21T01:54:08.1135303Z,Build Operation ID: 0c40f355417a7d17,,0
+	2025-11-21T01:54:08.1186727Z,Repository Commit : b42275cd-1934-46fd-9cfe-2de8707e5b72,,0
+	2025-11-21T01:54:08.1252169Z,OS Type           : bullseye,,0
+	2025-11-21T01:54:08.1317241Z,Image Type        : githubactions,,0
+	2025-11-21T01:54:08.1372178Z,,,0
+	2025-11-21T01:54:08.1435664Z,Primary SDK Storage URL: https://oryx-cdn.microsoft.io,,0
+	2025-11-21T01:54:08.1612505Z,Backup SDK Storage URL: ,,0
+	2025-11-21T01:54:08.1756830Z,Detecting platforms...,,0
+	2025-11-21T01:54:08.1820191Z,External SDK provider is enabled.,,0
+	2025-11-21T01:54:08.1891460Z,Requesting metadata for platform python from external SDK provider,,0
+	2025-11-21T01:54:08.3851193Z,Requesting metadata for platform python from external SDK provider,,0
+	2025-11-21T01:54:08.4720497Z,Detected following platforms:,,0
+	2025-11-21T01:54:08.4828032Z,  python: 3.11.14,,0
+	2025-11-21T01:54:08.5679728Z,,,0
+	2025-11-21T01:54:08.5843575Z,Using intermediate directory '/tmp/8de28a0db0c35bb'.,,0
+	2025-11-21T01:54:08.5940970Z,,,0
+	2025-11-21T01:54:08.6101660Z,Copying files to the intermediate directory...,,0
+	2025-11-21T01:54:08.6348532Z,Done in 0 sec(s).,,0
+	2025-11-21T01:54:08.6483300Z,,,0
+	2025-11-21T01:54:08.6574430Z,Source directory     : /tmp/8de28a0db0c35bb,,0
+	2025-11-21T01:54:08.6659859Z,Destination directory: /tmp/build/expressbuild,,0
+	2025-11-21T01:54:08.6795959Z,,,0
+	2025-11-21T01:54:08.7308403Z,Python Version: /tmp/oryx/platforms/python/3.11.14/bin/python3.11,,0
+	2025-11-21T01:54:08.7471701Z,Creating directory for command manifest file if it does not exist,,0
+	2025-11-21T01:54:08.7698579Z,Removing existing manifest file,,0
+	2025-11-21T01:54:08.7970106Z,,,0
+	2025-11-21T01:54:08.8043478Z,Running pip install...,,0
+	2025-11-21T01:54:21.6909478Z,Done in 13 sec(s).,,0
+	2025-11-21T01:54:21.7151661Z,[01:54:09+0000] Collecting python-dotenv,,0
+	2025-11-21T01:54:21.7265266Z,[01:54:09+0000]   Using cached python_dotenv-1.2.1-py3-none-any.whl (21 kB),,0
+	2025-11-21T01:54:21.7378065Z,[01:54:09+0000] Collecting azure-identity,,0
+	2025-11-21T01:54:21.7498126Z,[01:54:09+0000]   Using cached azure_identity-1.25.1-py3-none-any.whl (191 kB),,0
+	2025-11-21T01:54:21.7774134Z,[01:54:09+0000] Collecting azure-storage-blob,,0
+	2025-11-21T01:54:21.7908798Z,[01:54:09+0000]   Using cached azure_storage_blob-12.27.1-py3-none-any.whl (428 kB),,0
+	2025-11-21T01:54:21.8211642Z,[01:54:09+0000] Collecting azure-functions,,0
+	2025-11-21T01:54:21.8346551Z,[01:54:09+0000]   Using cached azure_functions-1.24.0-py3-none-any.whl (108 kB),,0
+	2025-11-21T01:54:21.8491137Z,[01:54:10+0000] Collecting pandas,,0
+	2025-11-21T01:54:21.8609920Z,[01:54:10+0000]   Using cached pandas-2.3.3-cp311-cp311-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl (12.8 MB),,0
+	2025-11-21T01:54:21.8686044Z,[01:54:10+0000] Collecting openpyxl,,0
+	2025-11-21T01:54:21.8810582Z,[01:54:10+0000]   Using cached openpyxl-3.1.5-py2.py3-none-any.whl (250 kB),,0
+	2025-11-21T01:54:21.8977950Z,[01:54:10+0000] Collecting msal>=1.30.0,,0
+	2025-11-21T01:54:21.9139562Z,[01:54:10+0000]   Using cached msal-1.34.0-py3-none-any.whl (116 kB),,0
+	2025-11-21T01:54:21.9189482Z,[01:54:10+0000] Collecting msal-extensions>=1.2.0,,0
+	2025-11-21T01:54:21.9235470Z,[01:54:10+0000]   Using cached msal_extensions-1.3.1-py3-none-any.whl (20 kB),,0
+	2025-11-21T01:54:21.9363330Z,[01:54:10+0000] Collecting typing-extensions>=4.0.0,,0
+	2025-11-21T01:54:21.9414439Z,[01:54:10+0000]   Using cached typing_extensions-4.15.0-py3-none-any.whl (44 kB),,0
+	2025-11-21T01:54:21.9538362Z,[01:54:10+0000] Collecting azure-core>=1.31.0,,0
+	2025-11-21T01:54:21.9612871Z,[01:54:10+0000]   Using cached azure_core-1.36.0-py3-none-any.whl (213 kB),,0
+	2025-11-21T01:54:21.9728235Z,[01:54:11+0000] Collecting cryptography>=2.5,,0
+	2025-11-21T01:54:21.9818388Z,[01:54:11+0000]   Using cached cryptography-46.0.3-cp311-abi3-manylinux_2_28_x86_64.whl (4.5 MB),,0
+	2025-11-21T01:54:21.9911750Z,[01:54:11+0000] Collecting isodate>=0.6.1,,0
+	2025-11-21T01:54:22.0140245Z,[01:54:11+0000]   Using cached isodate-0.7.2-py3-none-any.whl (22 kB),,0
+	2025-11-21T01:54:22.0199759Z,[01:54:11+0000] Collecting werkzeug~=3.1.3,,0
+	2025-11-21T01:54:22.0268130Z,[01:54:11+0000]   Using cached werkzeug-3.1.3-py3-none-any.whl (224 kB),,0
+	2025-11-21T01:54:22.0407227Z,[01:54:11+0000] Collecting pytz>=2020.1,,0
+	2025-11-21T01:54:22.0472447Z,[01:54:11+0000]   Using cached pytz-2025.2-py2.py3-none-any.whl (509 kB),,0
+	2025-11-21T01:54:22.0559730Z,[01:54:12+0000] Collecting numpy>=1.23.2,,0
+	2025-11-21T01:54:22.0690564Z,[01:54:12+0000]   Using cached numpy-2.3.5-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (16.9 MB),,0
+	2025-11-21T01:54:22.0816594Z,[01:54:12+0000] Collecting tzdata>=2022.7,,0
+	2025-11-21T01:54:22.0930008Z,[01:54:12+0000]   Using cached tzdata-2025.2-py2.py3-none-any.whl (347 kB),,0
+	2025-11-21T01:54:22.1160160Z,[01:54:12+0000] Collecting python-dateutil>=2.8.2,,0
+	2025-11-21T01:54:22.1275875Z,[01:54:12+0000]   Using cached python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB),,0
+	2025-11-21T01:54:22.1461383Z,[01:54:12+0000] Collecting et-xmlfile,,0
+	2025-11-21T01:54:22.1566435Z,[01:54:12+0000]   Using cached et_xmlfile-2.0.0-py3-none-any.whl (18 kB),,0
+	2025-11-21T01:54:22.1722172Z,[01:54:12+0000] Collecting requests>=2.21.0,,0
+	2025-11-21T01:54:22.1864599Z,[01:54:12+0000]   Using cached requests-2.32.5-py3-none-any.whl (64 kB),,0
+	2025-11-21T01:54:22.2010921Z,[01:54:13+0000] Collecting cffi>=2.0.0,,0
+	2025-11-21T01:54:22.2166464Z,[01:54:13+0000]   Using cached cffi-2.0.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (215 kB),,0
+	2025-11-21T01:54:22.2284106Z,[01:54:13+0000] Collecting pycparser,,0
+	2025-11-21T01:54:22.2383622Z,[01:54:13+0000]   Using cached pycparser-2.23-py3-none-any.whl (118 kB),,0
+	2025-11-21T01:54:22.2556604Z,[01:54:13+0000] Collecting PyJWT[crypto]<3&comma;>=1.0.0,,0
+	2025-11-21T01:54:22.2646719Z,[01:54:13+0000]   Using cached PyJWT-2.10.1-py3-none-any.whl (22 kB),,0
+	2025-11-21T01:54:22.2727602Z,[01:54:13+0000] Collecting six>=1.5,,0
+	2025-11-21T01:54:22.2820546Z,[01:54:13+0000]   Using cached six-1.17.0-py2.py3-none-any.whl (11 kB),,0
+	2025-11-21T01:54:22.2877348Z,[01:54:13+0000] Collecting urllib3<3&comma;>=1.21.1,,0
+	2025-11-21T01:54:22.2938994Z,[01:54:13+0000]   Using cached urllib3-2.5.0-py3-none-any.whl (129 kB),,0
+	2025-11-21T01:54:22.2994963Z,[01:54:13+0000] Collecting charset_normalizer<4&comma;>=2,,0
+	2025-11-21T01:54:22.3062136Z,[01:54:13+0000]   Using cached charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (151 kB),,0
+	2025-11-21T01:54:22.3137119Z,[01:54:13+0000] Collecting certifi>=2017.4.17,,0
+	2025-11-21T01:54:22.3186400Z,[01:54:13+0000]   Using cached certifi-2025.11.12-py3-none-any.whl (159 kB),,0
+	2025-11-21T01:54:22.3252785Z,[01:54:13+0000] Collecting idna<4&comma;>=2.5,,0
+	2025-11-21T01:54:22.3311056Z,[01:54:13+0000]   Using cached idna-3.11-py3-none-any.whl (71 kB),,0
+	2025-11-21T01:54:22.3371923Z,[01:54:14+0000] Collecting MarkupSafe>=2.1.1,,0
+	2025-11-21T01:54:22.3440295Z,[01:54:14+0000]   Using cached markupsafe-3.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (22 kB),,0
+	2025-11-21T01:54:22.3502194Z,[01:54:14+0000] Installing collected packages: pycparser&comma; cffi&comma; urllib3&comma; PyJWT&comma; idna&comma; cryptography&comma; charset-normalizer&comma; certifi&comma; requests&comma; typing-extensions&comma; six&comma; msal&comma; MarkupSafe&comma; werkzeug&comma; tzdata&comma; pytz&comma; python-dateutil&comma; numpy&comma; msal-extensions&comma; isodate&comma; et-xmlfile&comma; azure-core&comma; python-dotenv&comma; pandas&comma; openpyxl&comma; azure-storage-blob&comma; azure-identity&comma; azure-functions,,0
+	2025-11-21T01:54:22.3577090Z,[01:54:21+0000] Successfully installed MarkupSafe-3.0.3 PyJWT-2.10.1 azure-core-1.36.0 azure-functions-1.24.0 azure-identity-1.25.1 azure-storage-blob-12.27.1 certifi-2025.11.12 cffi-2.0.0 charset-normalizer-3.4.4 cryptography-46.0.3 et-xmlfile-2.0.0 idna-3.11 isodate-0.7.2 msal-1.34.0 msal-extensions-1.3.1 numpy-2.3.5 openpyxl-3.1.5 pandas-2.3.3 pycparser-2.23 python-dateutil-2.9.0.post0 python-dotenv-1.2.1 pytz-2025.2 requests-2.32.5 six-1.17.0 typing-extensions-4.15.0 tzdata-2025.2 urllib3-2.5.0 werkzeug-3.1.3,,0
+	2025-11-21T01:54:22.3633107Z,WARNING: You are using pip version 21.2.4; however&comma; version 25.3 is available.,,0
+	2025-11-21T01:54:22.3751048Z,You should consider upgrading via the '/tmp/oryx/platforms/python/3.11.14/bin/python3.11 -m pip install --upgrade pip' command.,,0
+	2025-11-21T01:54:22.3909241Z,Not a vso image&comma; so not writing build commands,,0
+	2025-11-21T01:54:22.4009602Z,Preparing output...,,0
+	2025-11-21T01:54:22.4066613Z,,,0
+	2025-11-21T01:54:22.4208987Z,Copying files to destination directory '/tmp/build/expressbuild'...,,0
+	2025-11-21T01:54:24.4660024Z,Done in 3 sec(s).,,0
+	2025-11-21T01:54:24.4748745Z,,,0
+	2025-11-21T01:54:24.4824370Z,Removing existing manifest file,,0
+	2025-11-21T01:54:24.4904708Z,Creating a manifest file...,,0
+	2025-11-21T01:54:24.4975916Z,Manifest file created.,,0
+	2025-11-21T01:54:24.5062774Z,Copying .ostype to manifest output directory.,,0
+	2025-11-21T01:54:24.5189307Z,,,0
+	2025-11-21T01:54:24.5283247Z,Done in 16 sec(s).,,0
+2025-11-21T01:54:24.8635864Z,Writing the artifacts to a Zip file,2589d0fa-a721-4377-b361-4aa9979cab7f,0
+2025-11-21T01:54:27.3868723Z,Running post deployment command(s)...,aa8a8fb4-6374-46e9-92a7-2b67131cdceb,0
+2025-11-21T01:54:27.5055342Z,,f4a7d4fe-8c42-4c37-92a3-fc1e5083fe60,0
+2025-11-21T01:54:27.6285837Z,Generating summary of Oryx build,caa6a1f6-b0fd-4536-852c-b0b2a32a9a2a,0
+2025-11-21T01:54:27.7366303Z,Deployment Log file does not exist in /tmp/oryx-build.log,2405d74a-5e8a-47cd-8911-ffaa3e50f08a,0
+2025-11-21T01:54:27.8427710Z,The logfile at /tmp/oryx-build.log is empty. Unable to fetch the summary of build,c8fc5345-bb9d-4b99-9184-db22eb1b3f4e,0
+2025-11-21T01:54:27.9694363Z,Triggering recycle (preview mode disabled).,484353eb-db16-4d63-9567-7a72f59729a1,0
+2025-11-21T01:54:28.1362825Z,Deployment successful. deployer = Push-Deployer deploymentPath = Functions App ZipDeploy. Extract zip. Remote build.,a016f4e7-6079-4bb4-9095-232a08a05252,0
