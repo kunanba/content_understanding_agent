@@ -44,28 +44,6 @@ A beautiful web interface for the Content Understanding Agent that allows you to
 - Real-time validation of data extraction quality
 - Error handling and status reporting
 
-## Packaging as Desktop App
-
-### Option 1: PyInstaller (Recommended)
-```bash
-# Install PyInstaller
-pip install pyinstaller
-
-# Create standalone executable
-pyinstaller --onefile --windowed --add-data ".env:." --hidden-import=streamlit app.py
-
-# The .exe will be in the 'dist' folder
-```
-
-### Option 2: Electron
-```bash
-# Install electron-builder
-npm install -g electron-builder
-
-# Package as Electron app
-# (See electron-packaging.md for detailed steps)
-```
-
 ## Deployment Options
 
 ### Azure Web Apps
