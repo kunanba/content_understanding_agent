@@ -50,10 +50,8 @@ def test_agent_workflow():
         else:
             print(f"\n❌ Workflow failed: {result.get('error', 'Unknown error')}")
         
-        # Cleanup
-        print("\n4️⃣ Cleaning up agent...")
-        agent.cleanup()
-        print("✅ Done!")
+        # Note: Agent persists for reuse across sessions
+        print("\n✅ Done! Agent remains active for future use.")
         
     except Exception as e:
         print(f"\n❌ Error: {str(e)}")

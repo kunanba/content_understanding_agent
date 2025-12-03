@@ -1,0 +1,8 @@
+streamlit
+azure-ai-projects
+azure-ai-agents
+azure-identity
+azure-ai-inference
+azure-storage-blob
+python-dotenv
+requests

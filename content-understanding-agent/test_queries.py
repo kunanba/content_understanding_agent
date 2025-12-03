@@ -48,10 +48,8 @@ def test_natural_language_queries():
             print(f"💬 Answer:\n{answer}")
             print("-" * 80)
         
-        # Cleanup
-        print("\n4️⃣ Cleaning up agent...")
-        agent.cleanup()
-        print("✅ Done!")
+        # Note: Agent persists for reuse
+        print("\n✅ Done! Agent remains active for future use.")
         
     except Exception as e:
         print(f"\n❌ Error: {str(e)}")

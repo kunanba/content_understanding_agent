@@ -22,10 +22,11 @@ class ContentUnderstandingAgent:
     4. Clean up processed files
     """
     
-    def __init__(self):
+    def __init__(self, agent_name: str = "content-understanding-agent"):
         """Initialize the agent with Azure AI Foundry project connection."""
         load_dotenv()
         
+        self.agent_name = agent_name
         self.project_endpoint = os.getenv("PROJECT_ENDPOINT")
         self.model_deployment = os.getenv("MODEL_DEPLOYMENT_NAME", "gpt-4o")
         
@@ -57,10 +58,30 @@ class ContentUnderstandingAgent:
         # Enable automatic function calls
         self.project_client.agents.enable_auto_function_calls(toolset)
         
-        # Create the agent with workflow orchestration instructions
-        self.agent = self.project_client.agents.create_agent(
+        # Try to find existing agent by name
+        self.agent = self._find_or_create_agent(toolset)
+        
+        print(f"✅ Using agent: {self.agent.id} (name: {self.agent_name})")
+    
+    def _find_or_create_agent(self, toolset: ToolSet):
+        """Find existing agent by name or create new one."""
+        # List all agents
+        try:
+            agents = self.project_client.agents.list_agents()
+            
+            # Look for agent with matching name
+            for agent in agents:
+                if agent.name == self.agent_name:
+                    print(f"♻️ Found existing agent: {agent.id}")
+                    return agent
+        except Exception as e:
+            print(f"⚠️ Could not list agents: {e}")
+        
+        # Create new agent if not found
+        print(f"🆕 Creating new agent: {self.agent_name}")
+        return self.project_client.agents.create_agent(
             model=self.model_deployment,
-            name="content-understanding-agent",
+            name=self.agent_name,
             instructions="""You are a document processing agent that orchestrates workflows using Azure Functions.
 
 Your workflow for processing documents:
@@ -92,8 +113,6 @@ When answering questions about processed documents:
 - Provide specific details from the OCR results when available""",
             toolset=toolset
         )
-        
-        print(f"✅ Created agent: {self.agent.id}")
     
     def process_document(self, document_filename: str, classifier_id: str = "prebuilt-layout") -> dict:
         """
@@ -200,11 +219,12 @@ Provide status updates for each step and the final results."""
         
         return "No response generated"
     
-    def cleanup(self):
-        """Clean up agent resources."""
+    def delete_agent(self):
+        """Delete the agent permanently. Use with caution - normally not needed."""
         if self.agent:
             self.project_client.agents.delete_agent(self.agent.id)
-            print("🗑️ Deleted agent")
+            print(f"🗑️ Deleted agent: {self.agent.id}")
+            self.agent = None
 
 
 if __name__ == "__main__":
@@ -220,5 +240,5 @@ if __name__ == "__main__":
             print(response)
             print("-" * 80)
     
-    # Clean up
-    agent.cleanup()
+    # Note: Agent persists for reuse. Only delete if you want to remove it permanently.
+    # agent.delete_agent()
