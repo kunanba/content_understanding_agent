@@ -1,7 +1,0 @@
-<step title="Incoming Request" date="2025-11-21T02:58:55.473" instance="605d51" url="/deployments/a6931daf-8658-459a-bc54-fc7b00291fa7" method="GET" type="request" pid="768,1,24" Host="func-content-understanding-2220.scm.azurewebsites.net" User-Agent="functions-core-tools/4.4.0" Authorization="Bea..." Cookie="ARRAffinity=605d51bf315432eed0b82a1248444a551aa87e99c534f24b50a99a525aae342f; ARRAffinitySameSite=605d51bf315432eed0b82a1248444a551aa87e99c534f24b50a99a525aae342f" X-ARR-LOG-ID="4b3281ba-7ab2-4ea2-8c65-9f4e5ccd57ae" CLIENT-IP="104.9.131.63:52414" X-SITE-DEPLOYMENT-ID="func-content-understanding-2220" WAS-DEFAULT-HOSTNAME="func-content-understanding-2220.scm.azurewebsites.net" X-Forwarded-Proto="https" X-AppService-Proto="https" X-Forwarded-TlsVersion="1.3" X-WAWS-Unencoded-URL="/deployments/a6931daf-8658-459a-bc54-fc7b00291fa7" X-Client-IP="104.9.131.63" X-Client-Port="52414" >
-  <step title="Cleanup Xml Logs" date="2025-11-21T02:58:55.476" >
-    <step title="Cleanup Infos" date="2025-11-21T02:58:55.487" totalFiles="350" totalCleanup="190" /><!-- duration: 4ms -->
-  </step><!-- duration: 18ms -->
-  <step title="DeploymentService.GetResult" date="2025-11-21T02:58:55.500" /><!-- duration: 68ms -->
-  <step title="Outgoing response" date="2025-11-21T02:58:55.572" type="response" statusCode="200" statusText="OK" /><!-- duration: 3ms -->
-</step><!-- duration: 106ms -->

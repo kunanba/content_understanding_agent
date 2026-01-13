@@ -2,6 +2,60 @@
 
 AI-powered document processing system that orchestrates OCR, data extraction, validation, and natural language queries using Azure Functions and Microsoft Agent Framework.
 
+## 🚀 One-Step Deployment to Azure
+
+Deploy the entire solution (Function App, Container App, Storage, and all dependencies) with a single click:
+
+[![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fkunanba%2Fcontent_understanding_agent%2Fmain%2Fmain.bicep)
+
+**What gets deployed:**
+- ✅ Azure Storage Account with 5 containers
+- ✅ Azure Function App (Python 3.11) for OCR processing
+- ✅ Container Registry for Docker images
+- ✅ Container App for Streamlit web interface
+- ✅ Log Analytics & Application Insights
+- ✅ All RBAC roles and managed identities configured
+
+**Required parameters:**
+- `projectEndpoint` - Your AI Foundry project endpoint URL
+- `contentUnderstandingEndpoint` - Your Content Understanding service endpoint
+- `storageAccountName` - Unique storage account name (3-24 chars, lowercase)
+- `functionAppName` - Unique function app name
+- `containerRegistryName` - Unique registry name (5-50 chars, alphanumeric)
+
+### Alternative: Deploy via Azure CLI
+
+```powershell
+# Clone the repository
+git clone https://github.com/kunanba/content_understanding_agent.git
+cd content_understanding_agent
+
+# Login to Azure
+az login
+
+# Create resource group
+$RESOURCE_GROUP = "content-understanding-rg"
+$LOCATION = "eastus"
+az group create --name $RESOURCE_GROUP --location $LOCATION
+
+# Deploy infrastructure
+az deployment group create \
+  --resource-group $RESOURCE_GROUP \
+  --template-file main.bicep \
+  --parameters projectEndpoint="YOUR_AI_PROJECT_ENDPOINT" \
+               contentUnderstandingEndpoint="YOUR_CONTENT_UNDERSTANDING_ENDPOINT" \
+               storageAccountName="stcontentuniq123" \
+               functionAppName="func-content-uniq123" \
+               containerRegistryName="acrcontentuniq123"
+```
+
+**Post-deployment steps:**
+1. Deploy function code: `func azure functionapp publish <functionAppName>`
+2. Build and push container image (see [CONTAINER_DEPLOYMENT.md](content-understanding-agent/CONTAINER_DEPLOYMENT.md))
+3. Update container app with your image
+
+---
+
 ## 🏗️ Architecture
 
 ```

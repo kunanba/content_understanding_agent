@@ -1,7 +1,0 @@
-2025-11-22T06:27:23.0022367Z Container is terminating. Grace period: 5 seconds.
-2025-11-22T06:27:23.0723298Z Stop and delete container. Retry count = 0
-2025-11-22T06:27:23.0732946Z Stopping container: 538fe6707225_func-content-understanding-2220.
-2025-11-22T06:27:28.8466320Z Deleting container: 538fe6707225_func-content-understanding-2220. Retry count = 0
-2025-11-22T06:27:29.0444463Z Container spec TerminationMessagePolicy  path 
-2025-11-22T06:27:29.0711517Z Container is terminated. Total time elapsed: 6066 ms.
-2025-11-22T06:27:29.0784783Z Site: func-content-understanding-2220 stopped.

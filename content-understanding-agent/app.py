@@ -23,12 +23,16 @@ st.set_page_config(
     initial_sidebar_state="collapsed"
 )
 
-# Custom CSS for professional UI
+# Custom CSS for Microsoft Azure design
 st.markdown("""
 <style>
-    /* Main background gradient */
+    /* Import Segoe UI font (Microsoft's standard) */
+    @import url('https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;600;700&display=swap');
+    
+    /* Main background - Azure Portal style */
     .stApp {
-        background: linear-gradient(135deg, #0284c7 0%, #1e40af 100%);
+        background: #f5f5f5;
+        font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
     }
     
     /* Main container */
@@ -37,42 +41,44 @@ st.markdown("""
         max-width: 1400px;
     }
     
-    /* Header styling */
+    /* Header styling - Azure Portal header */
     .main-header {
-        background: linear-gradient(135deg, #0284c7 0%, #1e40af 100%);
+        background: #0078d4;
         color: white;
-        padding: 2rem 2.5rem;
-        border-radius: 16px;
+        padding: 1.5rem 2rem;
+        border-radius: 4px;
         margin-bottom: 2rem;
-        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         display: flex;
         align-items: center;
         justify-content: space-between;
     }
     
     .header-title {
-        font-size: 28px;
+        font-size: 24px;
         font-weight: 600;
         margin: 0;
         display: flex;
         align-items: center;
         gap: 12px;
+        letter-spacing: -0.5px;
     }
     
     .status-badge {
-        background: rgba(255, 255, 255, 0.2);
-        padding: 8px 16px;
-        border-radius: 20px;
-        font-size: 14px;
+        background: rgba(255, 255, 255, 0.15);
+        padding: 6px 14px;
+        border-radius: 2px;
+        font-size: 13px;
         display: flex;
         align-items: center;
         gap: 8px;
+        border: 1px solid rgba(255, 255, 255, 0.3);
     }
     
     .status-dot {
         width: 8px;
         height: 8px;
-        background: #4ade80;
+        background: #00c851;
         border-radius: 50%;
         animation: pulse 2s infinite;
     }
@@ -82,130 +88,163 @@ st.markdown("""
         50% { opacity: 0.5; }
     }
     
-    /* Panel styling */
+    /* Panel styling - Azure card style */
     .stColumn {
         background: white;
-        padding: 2rem;
-        border-radius: 12px;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        padding: 1.5rem;
+        border-radius: 4px;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        border: 1px solid #e0e0e0;
     }
     
     /* Section headers */
     .section-title {
-        font-size: 18px;
+        font-size: 16px;
         font-weight: 600;
-        color: #1e293b;
-        margin-bottom: 1.5rem;
+        color: #323130;
+        margin-bottom: 1rem;
         display: flex;
         align-items: center;
         gap: 8px;
+        padding-bottom: 0.5rem;
+        border-bottom: 2px solid #0078d4;
     }
     
     /* File uploader styling */
     .uploadedFile {
         background: white;
-        border: 1px solid #e2e8f0;
-        border-radius: 12px;
-        padding: 16px;
+        border: 1px solid #d1d1d1;
+        border-radius: 2px;
+        padding: 12px;
     }
     
-    /* Button styling */
+    /* Button styling - Azure Fluent Design */
     .stButton > button {
-        border-radius: 8px;
+        border-radius: 2px;
         font-weight: 600;
-        padding: 0.5rem 1.5rem;
-        transition: all 0.2s ease;
-        border: none;
+        padding: 8px 16px;
+        transition: all 0.1s ease;
+        border: 1px solid transparent;
+        font-size: 14px;
     }
     
     .stButton > button[kind="primary"] {
-        background: linear-gradient(135deg, #0284c7 0%, #1e40af 100%);
+        background: #0078d4;
         color: white;
+        border-color: #0078d4;
     }
     
     .stButton > button[kind="primary"]:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 6px 20px rgba(2, 132, 199, 0.4);
+        background: #106ebe;
+        border-color: #106ebe;
     }
     
     .stButton > button[kind="secondary"] {
         background: white;
-        color: #0284c7;
-        border: 1px solid #e2e8f0;
+        color: #323130;
+        border: 1px solid #8a8886;
     }
     
     .stButton > button[kind="secondary"]:hover {
-        background: #f0f9ff;
-        border-color: #0284c7;
+        background: #f3f2f1;
+        border-color: #323130;
     }
     
-    /* Quick action buttons */
+    /* Quick action buttons - Azure style */
     .quick-action {
         background: white;
-        border: 1px solid #e2e8f0;
-        border-radius: 8px;
-        padding: 0.75rem 1rem;
-        margin-bottom: 0.5rem;
+        border: 1px solid #d1d1d1;
+        border-radius: 2px;
+        padding: 10px 14px;
+        margin-bottom: 8px;
         cursor: pointer;
-        transition: all 0.2s ease;
+        transition: all 0.1s ease;
+        font-size: 14px;
         font-size: 13px;
         color: #475569;
     }
     
     .quick-action:hover {
-        background: #f0f9ff;
-        border-color: #0284c7;
-        color: #0284c7;
-        transform: translateX(4px);
+        background: #f3f2f1;
+        border-color: #0078d4;
     }
     
-    /* Chat messages */
+    /* Chat messages - Azure style */
     .stChatMessage {
         background: white;
-        border-radius: 12px;
-        padding: 1rem;
-        margin-bottom: 1rem;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        border-radius: 2px;
+        padding: 12px;
+        margin-bottom: 8px;
+        border-left: 3px solid #0078d4;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
     }
     
-    /* Stats cards */
+    /* Stats cards - Azure metrics style */
     .stat-card {
         background: white;
-        padding: 1.25rem;
-        border-radius: 8px;
-        border: 1px solid #e2e8f0;
+        padding: 16px;
+        border-radius: 2px;
+        border: 1px solid #d1d1d1;
         text-align: center;
     }
     
     .stat-value {
-        font-size: 28px;
-        font-weight: 700;
-        color: #0284c7;
+        font-size: 32px;
+        font-weight: 600;
+        color: #0078d4;
         margin-bottom: 4px;
     }
     
     .stat-label {
-        font-size: 12px;
-        color: #64748b;
-        text-transform: uppercase;
-        letter-spacing: 0.5px;
+        font-size: 13px;
+        color: #605e5c;
+        font-weight: 400;
     }
     
-    /* Info boxes */
+    /* Info boxes - Azure alert style */
     .stAlert {
-        border-radius: 8px;
-        border: none;
+        border-radius: 2px;
+        border-left: 4px solid #0078d4;
+    }
+    
+    /* Success boxes */
+    .stSuccess {
+        border-left-color: #00c851;
+    }
+    
+    /* Warning boxes */
+    .stWarning {
+        border-left-color: #ffb900;
+    }
+    
+    /* Error boxes */
+    .stError {
+        border-left-color: #e81123;
     }
     
     /* Chat input */
     .stChatInputContainer {
-        border-radius: 8px;
+        border-radius: 2px;
     }
     
     /* Hide streamlit branding */
     #MainMenu {visibility: hidden;}
     footer {visibility: hidden;}
     
+    /* Processing indicator - Azure style */
+    .processing-banner {
+        background: #fff4ce;
+        border: 1px solid #ffb900;
+        border-left: 4px solid #ffb900;
+        border-radius: 2px;
+        padding: 12px 16px;
+        margin-bottom: 1rem;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        font-size: 14px;
+        color: #323130;
+    }
     /* Processing indicator */
     .processing-banner {
         background: #fff7ed;
@@ -237,6 +276,12 @@ if 'documents_processed' not in st.session_state:
     st.session_state.documents_processed = 0
 if 'agent_initialized' not in st.session_state:
     st.session_state.agent_initialized = False
+if 'query_cache' not in st.session_state:
+    st.session_state.query_cache = {}  # Cache responses to avoid duplicate API calls
+if 'last_query_time' not in st.session_state:
+    st.session_state.last_query_time = 0  # Track last query timestamp for rate limiting
+if 'pending_question' not in st.session_state:
+    st.session_state.pending_question = None  # Track pending quick question to process
 
 
 def upload_to_blob(file_data, filename):
@@ -275,6 +320,49 @@ def initialize_agent():
         except Exception as e:
             return False, f"❌ Failed to initialize agent: {str(e)}"
     return True, "Agent already initialized"
+
+
+def query_with_cache(question: str, thread_id: str, max_retries: int = 3):
+    """Query agent with caching and retry logic to handle rate limits."""
+    import time
+    import re
+    
+    # Create cache key from question and thread
+    cache_key = f"{thread_id}:{question.lower().strip()}"
+    
+    # Check cache first
+    if cache_key in st.session_state.query_cache:
+        return st.session_state.query_cache[cache_key]
+    
+    # Make actual API call with retry logic
+    for attempt in range(max_retries):
+        try:
+            response = st.session_state.agent.query(question, thread_id)
+            
+            # Store in cache on success
+            st.session_state.query_cache[cache_key] = response
+            return response
+            
+        except Exception as e:
+            error_str = str(e)
+            
+            # Check if it's a rate limit error
+            if 'rate_limit_exceeded' in error_str or 'RateLimitError' in error_str:
+                # Try to extract wait time from error message
+                wait_match = re.search(r'retry after (\d+) seconds', error_str)
+                wait_time = int(wait_match.group(1)) if wait_match else (2 ** attempt) * 5
+                
+                if attempt < max_retries - 1:
+                    st.warning(f"⏳ Rate limit hit. Waiting {wait_time} seconds before retry {attempt + 1}/{max_retries}...")
+                    time.sleep(wait_time)
+                    continue
+                else:
+                    return f"❌ **Rate Limit Exceeded**\n\nThe AI model is receiving too many requests. Please:\n- Wait 30-60 seconds before asking another question\n- Request quota increase at: https://aka.ms/oai/quotaincrease\n\nTechnical details: {error_str}"
+            else:
+                # Non-rate-limit error, raise it
+                raise
+    
+    return "❌ Failed to get response after multiple retries."
 
 
 # Custom header with status badge
@@ -338,6 +426,7 @@ with col1:
             # Upload file first
             with st.spinner("Uploading file..."):
                 success, message = upload_to_blob(uploaded_file.getvalue(), uploaded_file.name)
+                st.info(message)  # Show upload status
                 if not success:
                     st.error(message)
                     st.stop()
@@ -437,17 +526,28 @@ with col2:
         # Display quick buttons in a compact grid
         for question in quick_questions:
             if st.button(question, key=f"quick_{question}", use_container_width=True):
-                # Add to messages and process
-                clean_question = question.split(" ", 1)[1]  # Remove emoji
-                st.session_state.messages.append({"role": "user", "content": clean_question})
-                
-                if st.session_state.agent and st.session_state.thread_id:
-                    try:
-                        response = st.session_state.agent.query(clean_question, st.session_state.thread_id)
-                        st.session_state.messages.append({"role": "assistant", "content": response})
-                        st.rerun()
-                    except Exception as e:
-                        st.error(f"Error: {str(e)}")
+                # Add user message and trigger immediate rerun to show it
+                st.session_state.messages.append({"role": "user", "content": question})
+                # Mark that we need to process this question
+                st.session_state.pending_question = question
+                st.rerun()
+        
+        # Process pending question after UI has updated
+        if hasattr(st.session_state, 'pending_question') and st.session_state.pending_question:
+            question_to_process = st.session_state.pending_question
+            st.session_state.pending_question = None  # Clear the pending state
+            
+            if st.session_state.agent and st.session_state.thread_id:
+                try:
+                    # Extract clean question without emoji for API call
+                    clean_question = question_to_process.split(" ", 1)[1] if " " in question_to_process else question_to_process
+                    st.session_state.last_query_time = time.time()
+                    response = query_with_cache(clean_question, st.session_state.thread_id)
+                    st.session_state.messages.append({"role": "assistant", "content": response})
+                    st.rerun()
+                except Exception as e:
+                    st.session_state.messages.append({"role": "assistant", "content": f"❌ Error: {str(e)}"})
+                    st.rerun()
         
         st.markdown("---")
         
@@ -459,7 +559,8 @@ with col2:
             # Get agent response
             if st.session_state.agent and st.session_state.thread_id:
                 try:
-                    response = st.session_state.agent.query(prompt, st.session_state.thread_id)
+                    st.session_state.last_query_time = time.time()  # Update query timestamp
+                    response = query_with_cache(prompt, st.session_state.thread_id)
                     st.session_state.messages.append({"role": "assistant", "content": response})
                     st.rerun()
                 except Exception as e:

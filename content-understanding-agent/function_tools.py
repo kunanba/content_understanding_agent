@@ -32,7 +32,7 @@ def perform_ocr(blob_name: str, classifier_id: str = "prebuilt-layout") -> Dict[
     blob_url = f"https://{storage_account_name}.blob.core.windows.net/incoming-docs/{blob_name}"
     
     payload = {
-        "classifier_id": classifier_id,
+        "analyzer_id": classifier_id,  # Azure Function expects 'analyzer_id'
         "blob_url": blob_url,
         "storage_account_name": storage_account_name
     }
@@ -46,10 +46,23 @@ def perform_ocr(blob_name: str, classifier_id: str = "prebuilt-layout") -> Dict[
         )
         response.raise_for_status()
         return response.json()
+    except requests.exceptions.HTTPError as e:
+        # Get detailed error from response body
+        try:
+            error_detail = response.json()
+            return {
+                "success": False,
+                "error": f"HTTP {response.status_code}: {error_detail}"
+            }
+        except:
+            return {
+                "success": False,
+                "error": f"HTTP {response.status_code}: {response.text[:500]}"
+            }
     except Exception as e:
         return {
             "success": False,
-            "error": str(e)
+            "error": f"{type(e).__name__}: {str(e)}"
         }
 
 

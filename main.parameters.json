@@ -1,0 +1,36 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "environmentName": {
+      "value": "content-understanding"
+    },
+    "location": {
+      "value": "eastus"
+    },
+    "storageAccountName": {
+      "value": "stcontentunderstand"
+    },
+    "functionAppName": {
+      "value": "func-content-understanding"
+    },
+    "containerRegistryName": {
+      "value": "acrcontentunderstand"
+    },
+    "projectEndpoint": {
+      "value": "YOUR_AI_PROJECT_ENDPOINT"
+    },
+    "modelDeploymentName": {
+      "value": "gpt-4o"
+    },
+    "contentUnderstandingEndpoint": {
+      "value": "YOUR_CONTENT_UNDERSTANDING_ENDPOINT"
+    },
+    "containerAppMinReplicas": {
+      "value": 1
+    },
+    "containerAppMaxReplicas": {
+      "value": 3
+    }
+  }
+}

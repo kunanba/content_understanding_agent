@@ -114,7 +114,7 @@ When answering questions about processed documents:
             toolset=toolset
         )
     
-    def process_document(self, document_filename: str, classifier_id: str = "prebuilt-layout") -> dict:
+    def process_document(self, document_filename: str, classifier_id: str = "prebuilt-documentAnalyzer") -> dict:
         """
         Process a document through the complete workflow.
         
