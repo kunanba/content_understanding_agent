@@ -193,6 +193,30 @@ resource functionApp 'Microsoft.Web/sites@2023-01-01' = {
           name: 'CONTENT_UNDERSTANDING_ENDPOINT'
           value: contentUnderstandingEndpoint
         }
+        {
+          name: 'WEBSITE_CONTENTAZUREFILECONNECTIONSTRING'
+          value: 'DefaultEndpointsProtocol=https;AccountName=${storageAccountName};EndpointSuffix=${environment().suffixes.storage};AccountKey=${storageAccount.listKeys().keys[0].value}'
+        }
+        {
+          name: 'WEBSITE_CONTENTSHARE'
+          value: toLower(functionAppName)
+        }
+        {
+          name: 'SCM_DO_BUILD_DURING_DEPLOYMENT'
+          value: 'true'
+        }
+        {
+          name: 'ENABLE_ORYX_BUILD'
+          value: 'true'
+        }
+        {
+          name: 'BUILD_FLAGS'
+          value: 'UseExpressBuild'
+        }
+        {
+          name: 'XDG_CACHE_HOME'
+          value: '/tmp/.cache'
+        }
       ]
       ftpsState: 'Disabled'
       minTlsVersion: '1.2'

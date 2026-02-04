@@ -1,0 +1,16 @@
+.git*
+.vscode
+.venv
+local.settings.json
+test_*.py
+*.pyc
+__pycache__
+.python_packages
+.env
+.pytest_cache
+*.log
+images/
+.DS_Store
+*.md
+!README.md
+DEPLOYMENT_SUMMARY.md
